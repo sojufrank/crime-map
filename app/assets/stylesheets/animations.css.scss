@@ -6,51 +6,53 @@
 
 @keyframes police1 {
     0%  {left:0%; opacity:0;}
-    10%  {left:0%; opacity:0;}
-    20%  {left:0%; opacity:0;}
-    30%  {left:0%; opacity:1;}
-    70% {left:80%; opacity:1;}
-    80% {left:80%; opacity:1;}
-    90% {left:80%; opacity:1;}
+    3%  {left:0%; opacity:0;}
+    6%  {left:0%; opacity:0;}
+    10%  {left:0%; opacity:1;}
+    23% {left:80%; opacity:1;}
+    26% {left:80%; opacity:1;}
+    30% {left:80%; opacity:1;}
+    33% {left:80%; opacity:0;}
     100% {left:80%; opacity:0;}
 }
 
 @keyframes crimemove {
     0%  {left:0%; opacity:0;}
-    10%  {left:0%; opacity:0;}
-    20%  {left:0%; opacity:1;}
-    70% {left:80%; opacity:1;}
-    80% {left:80%; opacity:1;}
-    90% {left:80%; opacity:0;}
+    3%  {left:0%; opacity:0;}
+    6%  {left:0%; opacity:1;}
+    23% {left:80%; opacity:1;}
+    26% {left:80%; opacity:1;}
+    30% {left:80%; opacity:0;}
     100% {left:80%; opacity:0;}
 }
 
 @keyframes police2 {
     0%  {left:80%; opacity:0;}
-    40%  {left:80%; opacity:0;}
-    50%  {left:80%; opacity:1;}
-    90%  {left:80%; opacity:1;}
+    13%  {left:80%; opacity:0;}
+    16%  {left:80%; opacity:1;}
+    30%  {left:80%; opacity:1;}
+    33% {left:80%; opacity:0;}
     100% {left:80%; opacity:0;}
 }
 
 .crimemove {
 position:relative;
 	animation-name:crimemove;
-	animation-duration: 10s;
+	animation-duration: 30s;
     animation-iteration-count: infinite;
 }
 
 .movement {
 	position:relative;
 	animation-name:police1;
-	animation-duration: 10s;
+	animation-duration: 30s;
     animation-iteration-count: infinite;
 }
 
 .police-fade {
     position:relative;
     animation-name:police2;
-    animation-duration: 10s;
+    animation-duration: 30s;
     animation-iteration-count: infinite;
 }
 

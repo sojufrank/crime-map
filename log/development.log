@@ -59516,3 +59516,188 @@ Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-06 06:23:16 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-06 15:34:53 -0800
+Processing by WelcomeController#home as HTML
+  Rendered welcome/_snazzy.html.erb (0.5ms)
+  Rendered welcome/_switch.html.erb (0.4ms)
+  Rendered welcome/_content.html.erb (0.4ms)
+  Rendered welcome/home.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_facebook.html.erb (0.5ms)
+Completed 200 OK in 323ms (Views: 312.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/animations.self-65c3a8285176037bde0cd17dd900e3674e064e837681dd357548ab02821e35a1.css?body=1" for 127.0.0.1 at 2015-11-06 15:34:54 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-06 15:35:23 -0800
+Processing by WelcomeController#home as HTML
+  Rendered welcome/_snazzy.html.erb (0.4ms)
+  Rendered welcome/_switch.html.erb (0.1ms)
+  Rendered welcome/_content.html.erb (0.0ms)
+  Rendered welcome/home.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+Completed 200 OK in 177ms (Views: 176.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/animations.self-f0964047d782e6534f5ed9c2ee467be26f932c9a7a92b57c6b6bdbf88c75dc3c.css?body=1" for 127.0.0.1 at 2015-11-06 15:35:23 -0800
+
+
+Started GET "/assets/custom.self-54945d10a6c6586c899f36f9c67237f7b96932a1706ca0d8e45915486e8b2920.css?body=1" for 127.0.0.1 at 2015-11-06 15:35:23 -0800
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-06 15:35:23 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-06 15:35:23 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-06 15:35:24 -0800
+
+
+Started GET "/assets/icons.self-5bdfac3a8a6dfe96f755abb94e223565597daef504682ff7a2a699ae06b77dff.css?body=1" for 127.0.0.1 at 2015-11-06 15:35:24 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-06 15:35:24 -0800
+
+
+Started GET "/assets/custom.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2015-11-06 15:35:24 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-06 15:35:24 -0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-06 15:35:24 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-06 15:35:24 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-06 15:37:42 -0800
+Processing by WelcomeController#home as HTML
+  Rendered welcome/_snazzy.html.erb (0.0ms)
+  Rendered welcome/_switch.html.erb (0.0ms)
+  Rendered welcome/_content.html.erb (0.0ms)
+  Rendered welcome/home.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+Completed 200 OK in 133ms (Views: 132.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/animations.self-fafff0a3ac73c93bedc839d032f14ff7e394d51f42b3e3b97701baf1eb253c8b.css?body=1" for 127.0.0.1 at 2015-11-06 15:37:42 -0800
+
+
+Started GET "/assets/icons.self-5bdfac3a8a6dfe96f755abb94e223565597daef504682ff7a2a699ae06b77dff.css?body=1" for 127.0.0.1 at 2015-11-06 15:37:42 -0800
+
+
+Started GET "/assets/custom.self-54945d10a6c6586c899f36f9c67237f7b96932a1706ca0d8e45915486e8b2920.css?body=1" for 127.0.0.1 at 2015-11-06 15:37:42 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-06 15:37:42 -0800
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-06 15:37:42 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-06 15:37:42 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-06 15:37:42 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-06 15:37:42 -0800
+
+
+Started GET "/assets/custom.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2015-11-06 15:37:42 -0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-06 15:37:42 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-06 15:37:42 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-06 15:38:27 -0800
+Processing by WelcomeController#home as HTML
+  Rendered welcome/_snazzy.html.erb (0.0ms)
+  Rendered welcome/_switch.html.erb (0.0ms)
+  Rendered welcome/_content.html.erb (0.1ms)
+  Rendered welcome/home.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+Completed 200 OK in 126ms (Views: 125.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/animations.self-c25554918536f3715a1c79942f5e945f48220d11c73968a37449f38e640ad0f4.css?body=1" for 127.0.0.1 at 2015-11-06 15:38:27 -0800
+
+
+Started GET "/assets/custom.self-54945d10a6c6586c899f36f9c67237f7b96932a1706ca0d8e45915486e8b2920.css?body=1" for 127.0.0.1 at 2015-11-06 15:38:27 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-06 15:38:27 -0800
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-06 15:38:27 -0800
+
+
+Started GET "/assets/icons.self-5bdfac3a8a6dfe96f755abb94e223565597daef504682ff7a2a699ae06b77dff.css?body=1" for 127.0.0.1 at 2015-11-06 15:38:27 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-06 15:38:27 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-06 15:38:27 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-06 15:38:27 -0800
+
+
+Started GET "/assets/custom.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2015-11-06 15:38:27 -0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-06 15:38:27 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-06 15:38:27 -0800
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-06 15:40:02 -0800
+Processing by WelcomeController#home as HTML
+  Rendered welcome/_snazzy.html.erb (0.0ms)
+  Rendered welcome/_switch.html.erb (0.0ms)
+  Rendered welcome/_content.html.erb (0.0ms)
+  Rendered welcome/home.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_facebook.html.erb (0.1ms)
+Completed 200 OK in 128ms (Views: 127.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/animations.self-d62b99c5d8a7d0c72b17d2786529d0019b91334de83c18d9034739cdbce5b06e.css?body=1" for 127.0.0.1 at 2015-11-06 15:40:03 -0800
+
+
+Started GET "/assets/custom.self-54945d10a6c6586c899f36f9c67237f7b96932a1706ca0d8e45915486e8b2920.css?body=1" for 127.0.0.1 at 2015-11-06 15:40:03 -0800
+
+
+Started GET "/assets/icons.self-5bdfac3a8a6dfe96f755abb94e223565597daef504682ff7a2a699ae06b77dff.css?body=1" for 127.0.0.1 at 2015-11-06 15:40:03 -0800
+
+
+Started GET "/assets/welcome.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-06 15:40:03 -0800
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-06 15:40:03 -0800
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-06 15:40:03 -0800
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-06 15:40:03 -0800
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-06 15:40:03 -0800
+
+
+Started GET "/assets/custom.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for 127.0.0.1 at 2015-11-06 15:40:03 -0800
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-06 15:40:03 -0800
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-06 15:40:03 -0800
