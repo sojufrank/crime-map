@@ -1,0 +1,208 @@
+<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.grey-light_blue.min.css" />
+
+<div class="demo-layout mdl-layout mdl-layout--fixed-header mdl-js-layout" style="background:#101010">
+    <header class="demo-header mdl-layout__header mdl-layout__header--scroll mdl-color--black mdl-color-text--white">
+        <div class="mdl-layout__header-row"> <span class="mdl-layout-title" style="opacity:.87"><h4>Seattle Crime Map</h4></span>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                <label class="mdl-button mdl-js-button mdl-button--icon" for="search"> <i class="material-icons">search</i>
+                </label>
+                <div class="mdl-textfield__expandable-holder">
+                    <input class="mdl-textfield__input" type="text" id="search"/>
+                    <label class="mdl-textfield__label" for="search">Enter your query...</label>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="demo-ribbon"></div>
+    <main class="demo-main mdl-layout__content">
+        <div class="demo-container mdl-grid">
+            <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+            <div align="center" class="mdl-color--grey-900 demo-content mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col" style="background:#303030;">
+
+                <div>
+                    <h2 class="mdl-color-text--white" style="opacity:.87;">Seattle Crime Map</h2>
+                    <p class="mdl-color-text--white" style="opacity:.56;">
+                        Welcome to my crime map project.  This map can be used to check the safety of the area around your neighborhood, workplace, or school.  The last 100 reports are initially marked, and the filter below can expand the results up to 1000.  Another filter has been added to display by a general offense summary.
+                    </p>
+
+                </div>
+
+                <div id="map" class="mdl-shadow--4dp"></div>
+                <br><br>
+
+                    <div class="select-section">
+                        <select ng-model="crimeResult" ng-change="filterMarkers()">
+                            <option ng-repeat="x in resultsFilter">{{x}}</option>
+                        </select>
+                        <select ng-model="crimeFilter" ng-change="filterMarkers()">
+                            <option value="">ALL</option>
+                            <option ng-model="crimeType" ng-repeat="x in crimeArr | orderBy: string">{{x}}</option>
+                        </select>
+                    </div>
+                
+            </div>
+        </div>
+        <footer class="mdl-color--black demo-footer mdl-mini-footer mdl-mini-footer">
+            <div class="mdl-mini-footer--left-section">
+                <ul class="mdl-mini-footer--link-list">
+                    <li><a href="http://www.seattlekkf.com">&copy 2015 www.seattlekkf.com </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="mdl-layout-spacer"></div>
+            <div class="mdl-mini-footer--right-section">
+                <ul class="mdl-mini-footer--link-list">
+                </ul>
+        </footer>
+    </main>
+</div>
+
+<script>
+angular.module('myMap', [])
+    .controller('MapCtrl', function($scope, $http) {
+        //filter for quantity of markers created
+        $scope.resultsFilter = [100, 250, 500, 750, 1000];
+
+        //function to refresh markers on option change
+        $scope.filterMarkers = function(x) {
+            initialize(x);
+        }
+
+
+        $scope.testbutton = function(){
+                $scope.testbutton = true;
+                console.log($scope.testbutton);
+        };
+        $scope.testbutton2 = function(){
+                $scope.testbutton = false;
+                console.log($scope.testbutton2);
+        };
+
+
+
+        $scope.toggle = function(){
+            console.log($scope.crime[i].iconbool);
+            if(!$scope.crime[i].iconbool){
+                $scope.crime[i].iconbool = true;
+            }
+            else {
+                $scope.crime[i].iconbool = false;
+            }
+        };
+
+        //draw map
+        var initialize = function() {
+            var mapCanvas = document.getElementById('map');
+            var mapOptions = {
+                //seattle coords - {lat: 47.6097, lng: -122.3331}
+                center: new google.maps.LatLng(47.6097, -122.3331),
+                zoom: 14,
+                mapTypeId: google.maps.MapTypeId.ROADMAP,
+                <%= render 'welcome/snazzy' %>
+            }
+
+            var map = new google.maps.Map(mapCanvas, mapOptions)
+
+
+            //map icons
+            var icons = function() {
+                <%= render 'welcome/switch' %>
+            };
+
+            //map markers
+            var markerBuilder = function() {
+
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng($scope.crime[i].maplat, $scope.crime[i].maplog),
+                    map: map,
+                    title: $scope.crime[i].mapsum,
+                    icon: icons()
+                });
+
+                google.maps.event.addListener(marker, 'click', function(e) {
+                    $scope.$apply(function() {
+                        //click toggle test
+                        $scope.toggle();
+                    });
+                });
+
+                //ruby partial.  check _content.html.erb
+                var content = <%= render 'welcome/content' %>;
+
+                marker.addListener('click', function() {});
+                    var infowindow = new google.maps.InfoWindow({
+                        content: content
+                });
+
+                google.maps.event.addListener(marker, 'click', (function(marker, content, infowindow) {
+                    //function to close infowindow by clicking icon
+                    return function() {
+                        if (infowindow.getMap()) {
+                            infowindow.close();
+                        } else {
+                            infowindow.open(map, marker);
+                        };
+                    };
+                })(marker, content, infowindow));
+            };
+
+            var markerMaker = function() {
+                //quantity filter validation check
+                if ($scope.crimeResult === undefined) {
+                    ii = 100;
+                } else {
+                    ii = $scope.crimeResult;
+                }
+                //for loop to build markers
+                for (i = 0; i < ii; i++) {
+                    //offense filter validation check
+                    if ($scope.crimeFilter === undefined) {
+                        markerBuilder();
+                    } else if ($scope.crime[i].mapsum === $scope.crimeFilter) {
+                        markerBuilder();
+                    }
+                };
+            };
+
+            var crimeBuilder = function(response) {
+                $scope.crime = [];
+                $scope.crimeArr = [];
+
+                for (i = 0; i < 1000; i++) {
+                    $scope.crimeArr.push(response.data[i].summarized_offense_description);
+                    $scope.crime.push({
+                        "maplat": parseFloat(response.data[i].latitude),
+                        "maplog": parseFloat(response.data[i].longitude),
+                        "mapsum": response.data[i].summarized_offense_description,
+                        "mapoffense": response.data[i].offense_type,
+                        "mapaddy": response.data[i].hundred_block_location,
+                        "mapdate": response.data[i].date_reported,
+                        "iconbool": false
+                    });
+                };
+                $scope.crimeArr = jQuery.unique($scope.crimeArr);
+                markerMaker($scope.crimeResult);
+            };
+            $http.get("https://data.seattle.gov/resource/7ais-f98f.json").then(crimeBuilder);
+
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    });
+
+</script>
+
+<style>
+.soju {
+    background-color:yellow;
+}
+#map {
+    width: 500px;
+    height: 400px;
+    background-color: #CCC;
+}
+
+</style>
+
+
+

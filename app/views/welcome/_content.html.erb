@@ -1,0 +1,29 @@
+// infowindow material design table
+
+'<div ng-hide="'+!$scope.crime[i].iconbool+'" class="fade mdl-card infocard">'+
+  '<div class="mdl-card__title">'+
+  '<i class="icon-police movement"></i>'+
+  '<i class="icon-frustrated crimemove"></i>'+
+  '<i class="icon-police police-fade"></i>'+
+  '</div>'+
+  '<div class="mdl-card__media">'+ 
+  '</div>'+
+  '<div class="mdl-card__supporting-text">'+
+    '<table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">'+
+    '<tbody>'+
+      '<tr>'+
+        '<td class="mdl-data-table__cell--non-numeric"><label>Date:</label></td>'+
+        '<td class="mdl-data-table__cell--non-numeric">'+$scope.crime[i].mapdate.substring(0,10)+'</td>'+
+      '</tr>'+
+      '<tr>'+
+        '<td class="mdl-data-table__cell--non-numeric"><label>Offense:</label></td>'+
+        '<td class="mdl-data-table__cell--non-numeric">'+$scope.crime[i].mapoffense+'</td>'+
+      '</tr>'+
+      '<tr>'+
+        '<td class="mdl-data-table__cell--non-numeric"><label>Address: </label></td>'+
+        '<td class="mdl-data-table__cell--non-numeric">'+$scope.crime[i].mapaddy+'</td>'+
+      '</tr>'+
+    '</tbody>'+
+  '</table>'+
+  '</div>'+
+'</div>'
