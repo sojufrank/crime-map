@@ -36,7 +36,7 @@
 }
 
 .crimemove {
-position:relative;
+    position:relative;
 	animation-name:crimemove;
 	animation-duration: 30s;
     animation-iteration-count: infinite;
@@ -56,3 +56,32 @@ position:relative;
     animation-iteration-count: infinite;
 }
 
+@keyframes spd2 {
+    0%  { opacity: 0;}
+    33%  { opacity: 0;}
+    34%  { opacity: 1;}
+    99%  { opacity: 1;}
+    100% { opacity: 0;}
+}
+
+.spd-img {
+    z-index:-1;
+    position:relative;
+    animation-name:spd2;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
+
+.spd-text{
+    font-family: 'Roboto', sans-serif;
+    border:solid transparent 1px;
+    border-radius:10px;
+    background-color:red;
+    opacity:.87;
+    position:absolute;
+    left:120px;
+    top:40px;
+    animation-name:spd2;
+    animation-duration: 30s;
+    animation-iteration-count: infinite;
+}
