@@ -28,6 +28,9 @@
 }
 
 .demo-main {
+  background:url("/city-bg.png") center fixed;
+  background-repeat: no-repeat;
+   background-size:100%;
   margin-top: -35vh;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
